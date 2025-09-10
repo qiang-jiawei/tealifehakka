@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频播放 - 视频竞赛平台</title>
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="video-container">
+        <header>
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1 id="video-title">视频播放</h1>
+            <div class="header-placeholder"></div>
+        </header>
+        
+        <div class="video-player-wrapper">
+            <div class="video-player">
+                <video id="main-video" muted>
+                    <source src="" type="video/mp4">
+                    您的浏览器不支持HTML5视频播放
+                </video>
+                
+                <div class="controls">
+                    <div class="progress-bar">
+                        <input type="range" id="progress" value="0" step="0.1">
+                        <div class="time-display">
+                            <span id="current-time">0:00</span> / <span id="total-time">0:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="control-buttons">
+                        <button id="play-pause" class="control-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        
+                        <div class="volume-control">
+                            <button id="mute" class="control-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                        </div>
+                        
+                        <div class="speed-control">
+                            <button id="speed-btn" class="control-btn">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </button>
+                            <div class="speed-options">
+                                <button data-speed="0.5">0.5x</button>
+                                <button data-speed="0.75">0.75x</button>
+                                <button data-speed="1" class="active">1x</button>
+                                <button data-speed="1.25">1.25x</button>
+                                <button data-speed="1.5">1.5x</button>
+                                <button data-speed="2">2x</button>
+                            </div>
+                        </div>
+                        
+                        <button id="fullscreen" class="control-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-details">
+                <h2 id="detail-title">视频标题</h2>
+                <div class="stats">
+                    <span><i class="fas fa-eye"></i> 2.5K 观看</span>
+                    <span><i class="fas fa-calendar"></i> 3天前</span>
+                </div>
+                <p id="video-description">视频描述将显示在这里，介绍视频内容和背景故事。</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/video.js"></script>
+</body>
+</html>
